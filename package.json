@@ -24,6 +24,7 @@
 		"nativescript-theme-core": "^1.0.4"
 	},
 	"devDependencies": {
+		"@nativescript/android": "7.0.1",
 		"@nativescript/ios": "7.2.0",
 		"@nativescript/types": "~7.3.0",
 		"@nativescript/webpack": "~4.1.0",

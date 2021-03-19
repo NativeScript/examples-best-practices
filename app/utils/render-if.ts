@@ -51,3 +51,14 @@ const when = new Property<any, Render>({
 	},
 });
 when.register(Render);
+
+export const templateProperty = new Property<any, Render>({
+	name: 'template',
+	affectsLayout: true,
+	valueChanged: (target) => {
+		target.refresh();
+	},
+});
+templateProperty.register(Render);
+
+Render.prototype.recycleNativeView = 'auto';

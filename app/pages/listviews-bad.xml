@@ -1,4 +1,4 @@
-<Page xmlns="http://schemas.nativescript.org/tns.xsd" navigatingTo="navigatingTo" actionBarHidden="false" xmlns:r="../utils/render-if">
+<Page xmlns="http://schemas.nativescript.org/tns.xsd" navigatingTo="navigatingTo" actionBarHidden="false" xmlns:r="utils/render-if">
      <Page.actionBar>
         <ActionBar>
             <Label text="ListViews Bad" class="header" />
@@ -8,16 +8,17 @@
     <ListView items="{{ myTitles }}" separatorColor="#000" class="list-group">
         <ListView.itemTemplate>
             <StackLayout class="list-group-item">
+              <Label text="ScrollDown" />
               <r:Render when="{{ !showSomethingElse }}">
                 <r:Render.template>
-                  <StackLayout>
+                  <StackLayout backgroundColor="lightblue">
                     <Label text="{{ title }}" textWrap="true" class="title" />
                   </StackLayout>
                 </r:Render.template>
               </r:Render>
               <r:Render when="{{ showSomethingElse === true }}">
                 <r:Render.template>
-                  <GridLayout rows="auto,5,auto">
+                  <GridLayout rows="auto,5,auto" backgroundColor="red">
                     <Label text="{{ title }}" textWrap="true" class="title" />
                     <Label row="2" text="Something Else" textWrap="true" class="title" />
                   </GridLayout>
