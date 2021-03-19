@@ -11,6 +11,11 @@
           <Button id="listviews-bad" col="0" text="Bad" tap="{{ viewDemo }}" class="btn btn-primary" />
           <Button id="listviews-good" col="2" text="Good" tap="{{ viewDemo }}" class="btn btn-primary" />
         </GridLayout>
+        <Label text="Bindings" class="h2 text-center" />
+        <GridLayout columns="*,5,*">
+          <Button id="bindings-bad" col="0" text="Bad" tap="{{ viewDemo }}" class="btn btn-primary" />
+          <Button id="bindings-good" col="2" text="Good" tap="{{ viewDemo }}" class="btn btn-primary" />
+        </GridLayout>
       </StackLayout>
     </ScrollView>
   </StackLayout>
