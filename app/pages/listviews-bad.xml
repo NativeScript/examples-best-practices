@@ -1,0 +1,30 @@
+<Page xmlns="http://schemas.nativescript.org/tns.xsd" navigatingTo="navigatingTo" actionBarHidden="false" xmlns:r="../utils/render-if">
+     <Page.actionBar>
+        <ActionBar>
+            <Label text="ListViews Bad" class="header" />
+        </ActionBar>
+    </Page.actionBar>
+
+    <ListView items="{{ myTitles }}" separatorColor="#000" class="list-group">
+        <ListView.itemTemplate>
+            <StackLayout class="list-group-item">
+              <r:Render when="{{ !showSomethingElse }}">
+                <r:Render.template>
+                  <StackLayout>
+                    <Label text="{{ title }}" textWrap="true" class="title" />
+                  </StackLayout>
+                </r:Render.template>
+              </r:Render>
+              <r:Render when="{{ showSomethingElse === true }}">
+                <r:Render.template>
+                  <GridLayout rows="auto,5,auto">
+                    <Label text="{{ title }}" textWrap="true" class="title" />
+                    <Label row="2" text="Something Else" textWrap="true" class="title" />
+                  </GridLayout>
+                </r:Render.template>
+              </r:Render>
+            </StackLayout>
+        </ListView.itemTemplate>
+    </ListView>
+
+</Page>

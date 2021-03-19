@@ -3,6 +3,9 @@ hooks/
 node_modules/
 platforms/
 
+# Npm
+package-lock.json
+
 # NativeScript Template
 *.js.map
 *.js
