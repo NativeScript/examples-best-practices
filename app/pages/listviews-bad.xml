@@ -7,8 +7,7 @@
 
     <ListView items="{{ myTitles }}" separatorColor="#000" class="list-group">
         <ListView.itemTemplate>
-            <StackLayout class="list-group-item">
-              <Label text="ScrollDown" />
+            <StackLayout>
               <r:Render when="{{ !showSomethingElse }}">
                 <r:Render.template>
                   <StackLayout backgroundColor="lightblue">
@@ -16,11 +15,12 @@
                   </StackLayout>
                 </r:Render.template>
               </r:Render>
-              <r:Render when="{{ showSomethingElse === true }}">
+              <r:Render when="{{ showSomethingElse }}">
                 <r:Render.template>
-                  <GridLayout rows="auto,5,auto" backgroundColor="red">
+                  <GridLayout rows="auto,5,auto,5,auto" backgroundColor="red">
                     <Label text="{{ title }}" textWrap="true" class="title" />
                     <Label row="2" text="Something Else" textWrap="true" class="title" />
+                    <Label row="4" text="Could show yet anything thing here" textWrap="true" class="title" />
                   </GridLayout>
                 </r:Render.template>
               </r:Render>

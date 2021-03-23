@@ -1,0 +1,30 @@
+<Page xmlns="http://schemas.nativescript.org/tns.xsd" navigatingTo="navigatingTo" actionBarHidden="false">
+     <Page.actionBar>
+        <ActionBar>
+            <Label text="ListViews Good" class="header" />
+        </ActionBar>
+    </Page.actionBar>
+
+  <GridLayout rows="auto,*">
+    <StackLayout class="p-20">
+      <Label text="Scroll below and notice layout changes on different row types are measured properly and performant." textWrap="true" />
+    </StackLayout>
+  </GridLayout>
+    <ListView items="{{ myTitles }}" separatorColor="#000" class="list-group" itemTemplateSelector="{{selectItemTemplate}}">
+      <ListView.itemTemplates>
+        <template key="onelayout">
+            <StackLayout backgroundColor="lightblue">
+              <Label text="{{ title }}" textWrap="true" class="title" />
+            </StackLayout>
+        </template>
+        <template key="anotherlayout">
+          <GridLayout rows="auto,5,auto,5,auto" backgroundColor="red">
+            <Label text="{{ title }}" textWrap="true" class="title" />
+            <Label row="2" text="Something Else" textWrap="true" class="title" />
+            <Label row="4" text="Could show yet anything thing here" textWrap="true" class="title" />
+          </GridLayout>
+        </template>
+      </ListView.itemTemplates>
+    </ListView>
+
+</Page>

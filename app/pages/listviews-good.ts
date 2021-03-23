@@ -10,4 +10,8 @@ export function navigatingTo(args: EventData) {
 
 export class PracticeModel extends Observable {
 	myTitles = items.concat(items).concat(items);
+
+	selectItemTemplate(item, index, items) {
+		return item && item.showSomethingElse ? 'anotherlayout' : 'onelayout';
+	}
 }
