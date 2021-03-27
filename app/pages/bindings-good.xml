@@ -1,0 +1,16 @@
+<Page xmlns="http://schemas.nativescript.org/tns.xsd" navigatingTo="navigatingTo" actionBarHidden="false">
+     <Page.actionBar>
+        <ActionBar>
+            <Label text="Bindings Good" class="header" />
+        </ActionBar>
+    </Page.actionBar>
+
+    <ListView items="{{ myTitles }}" separatorColor="#000" class="list-group">
+        <ListView.itemTemplate>
+          <GridLayout rows="auto" class="p-5 list-group-item">
+            <Label text="{{ title }}" textWrap="true" class="title" />
+          </GridLayout>
+        </ListView.itemTemplate>
+    </ListView>
+
+</Page>
